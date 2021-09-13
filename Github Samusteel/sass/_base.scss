@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root{
+    --primary: #091626;
+    --primary-dark-1: #040e1a;
+    --primary-light-1: #0e233b;
+    --primary-light-2: #10243c;
+
+    --gold: #AD974F;
+    --gold-light-1: #ccb466;
+    --gold-dark-1: #927c34;
+
+    --grey-light-1: rgb(216, 215, 215);
+    --grey-light-2: rgb(237, 234, 234);
+    --grey-dark-1: rgb(157, 155, 155);
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    min-width: 100vw;
+}
+
+.stop-scrolling{
+    height: 100vw;
+    overflow: hidden;
+}
+
+html{
+    cursor: none;
+    font-size: 62.5%;
+}
+
+.cursor{
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1003;
+    transition: transform .4s, background-color .4s;
+    backdrop-filter: grayscale(80%);
+}
+
+.main-content{
+}
+
+// CURSOR CHANGE OVER NAV LINKS
+.link-grow{
+    transform: scale(1.6);
+    background-color: rgba(#10243c, $alpha: .5);
+    backdrop-filter: unset;
+}
+
+.static-img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/static-1.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -100;
+
+    @media screen and (max-width: 900px){
+        background-image: url(../img/static-2.jpg);
+    }
+}
+
+.section-name{
+    position: absolute;
+    left: 0;
+    top: -7rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
+
+    background-color: rgba(#040e1a, .95);
+    z-index: 10;
+
+    &__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        overflow: hidden;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__icon{
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        fill: var(--gold);
+        height: 6rem;
+        width: 6rem;
+
+        @media screen and (max-width: 1000px){
+            height: 5rem;
+            width: 5rem;
+        }
+    }
+}
+
+.progressBar{
+    position: fixed;
+    top: .15rem;
+    left: 0;
+    width: 0vw;
+    height: 1.25vh;
+    background-color: var(--gold);
+    border-radius: 10px;
+    z-index: 999;
+    border: 2px solid #091626;
+    visibility: hidden;
+}
+
+.progressBar__active{
+    visibility: visible;
+}
+
+.scroll-up{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    
+    z-index: 998;
+    transition: all .2s;
+    opacity: 0;
+    visibility: hidden;
+
+    @media screen and (max-width: 1000px){
+        right: 2.5rem;
+        bottom: 2.5rem;
+    } 
+
+    @media screen and (max-width: 800px){
+        right: 2rem;
+        bottom: 2rem;
+    } 
+
+    @media screen and (max-width: 600px){
+        right: 1.5rem;
+        bottom: 1.5rem;
+    } 
+
+    &-active{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__icon{
+        height: 4.5rem;
+        width: 4.5rem;
+        fill: var(--gold-light-1);
+        animation: heart-beat 1.75s infinite linear;
+
+        @media screen and (max-width: 800px){
+            height: 4rem;
+            width: 4rem;
+        }  
+
+        @media screen and (max-width: 600px){
+            height: 3.5rem;
+            width: 3.5rem;
+        }  
+    }
+}
+
+@keyframes heart-beat{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.15);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+

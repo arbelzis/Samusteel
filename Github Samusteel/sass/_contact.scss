@@ -1,0 +1,222 @@
+.contact{
+    min-width: 100%;
+    min-height: 120vh;
+    background-image: linear-gradient(
+        to bottom,
+        var(--primary) 10%,
+        var(--primary-light-1)
+    );
+    margin-top: -23rem;
+    padding: 40rem 0 25rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1600px){
+        padding: 65rem 0 40rem 0;
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+
+    @media screen and (max-width: 1300px){
+        width: 40%;
+    }
+
+    @media screen and (max-width: 900px){
+        width: 45%;
+    }
+
+    @media screen and (max-width: 700px){
+        width: 65%;
+    }
+
+    @media screen and (max-width: 600px){
+        width: 75%;
+    }
+
+
+    & > *:not(:first-child){
+        margin-top: 2.5rem;
+    }
+}
+
+.container{
+    position: absolute;
+    min-width: 70%;
+    padding: 4rem 0 2rem 4rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.315);
+
+    background-image: linear-gradient(115deg,
+        #10243cec 55%,
+        transparent 55%
+    ),
+    url(./img/contact.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (max-width: 1300px){
+        background-image: linear-gradient(105deg,
+        #10243cec 55%,
+        transparent 55%
+    ),
+        url(./img/contact.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 1200px){
+        min-width: 80%;
+    }
+
+    @media screen and (max-width: 1000px){
+        background-image: linear-gradient(100deg,
+        #10243cec 55%,
+        transparent 55%
+    ),
+        url(./img/contact.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 900px){
+        background-image: linear-gradient(100deg,
+        #10243cec 60%,
+        transparent 60%
+    ),
+        url(./img/contact.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 700px){
+        background-image: linear-gradient(to right bottom,
+            var(--primary) 5%,
+            var(--primary-light-2)    
+        );
+        background-position: center;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 550px){
+        min-width: unset;
+        width: 80%;
+    padding: 4rem 0 2rem 0rem;
+
+    }
+
+    &__current-input{
+        margin-bottom: 1rem;
+        font-size: 4.5rem;
+        color: var(--gold-dark-1);
+        font-weight: 300;
+        animation: none;
+        align-self: center;
+        text-align: center;
+
+        @media screen and (max-width: 1300px){
+            font-size: 4.2rem;
+        }
+
+        @media screen and (max-width: 1000px){
+            font-size: 3.75rem;
+        }
+
+        @media screen and (max-width: 600px){
+            font-size: 3.45rem;
+        }
+
+        &--active{
+            animation: headlineEnter .3s linear;
+        }
+    }
+
+    &__input{
+        position: relative;
+        width: 100%;
+        padding: .75rem 0 .75rem 2rem;
+        border-radius: 99px;
+        border: none;
+        cursor: none;
+        font-size: 1.75rem;
+        color: var(--primary-dark-1);
+        font-weight: 400;
+        transition: all .1s linear;
+
+        &:focus{
+            outline: none;
+            background-color: #18293d;
+            border: var(--gold) 1px solid;
+            color: var(--gold-dark-1);
+
+            &::placeholder{
+                color: transparent;
+            }
+        }
+
+        &::placeholder{
+            font-size: 1.45rem;
+            color: rgba(0, 0, 0, 0.446);
+        }
+
+        &--comments{
+            padding-right: 2rem;
+            border-radius: 20px;
+
+            &::placeholder{
+                font-size: 1.55rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 1rem 2rem;
+            }
+        }
+    }
+
+    &__button{
+        font-size: 1.6rem;
+        border: none;
+        cursor: none;
+        align-self: center;
+        margin: 2rem 0 2rem 0;
+        border-radius: 99px;
+        padding: .5rem 3.5rem;
+        transition: color .2s, transform .3s;
+        color: var(--primary);
+        font-family: 'Lora', serif;
+
+        &:hover{
+            background-color: var(--gold);
+            color: var(--primary-dark-1);
+            box-shadow: 0px .5rem 2rem rgba(0, 0, 0, 0.342);
+            transform: scale(1.1) translateY(-1.5px);
+        }
+
+        &:active{
+            transform: scale(1.1) translateY(1.5px);
+        }
+    }
+}
+
+@keyframes headlineEnter{
+    0%{
+        transform: translateY(-300%);
+        opacity: 0;
+        z-index: -500;
+    }
+    50%{
+        z-index: -500;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

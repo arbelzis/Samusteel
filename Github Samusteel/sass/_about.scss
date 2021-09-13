@@ -1,0 +1,204 @@
+.about{
+    width: 100%;
+    margin-top: -18rem;
+    background-image: linear-gradient(
+        to bottom,
+        var(--primary) 10%,
+        var(--primary-light-1)
+    );
+    padding: 22rem 0 30rem 0;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+
+    @media screen and (max-width: 1300px){
+        padding: 22rem 0 22rem 0;
+    }
+
+    @media screen and (max-width: 1100px){
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 93%);
+        padding: 16rem 0 15rem 0;
+    }
+
+    @media screen and (max-width: 950px){
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
+    }
+
+    @media screen and (max-width: 550px){
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 97%);
+        padding: 20rem 0 10rem 0;
+    }
+
+    &__container{         //////// BIG FLEX FOR ALL
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        height: 80%;
+        margin: 8rem auto 8rem auto;
+
+        @media screen and (max-width: 1600px){
+            width: 80%;
+        }
+    }
+
+
+
+    ////////////////////////////////////////////////////////////////////////
+
+
+
+    &__header-presentation{    ///////// ROW 2 ITEMS LAYOUT FOR HEADER AND TEXT
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 850px){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__big-header{   
+        opacity: 0;   
+        font-size: 4.75rem;
+        line-height: 1.4;
+        color: var(--gold);
+        width: 45%;
+        word-spacing: 2px;
+        transition: opacity 2s ease-in-out;
+
+        @media screen and (max-width: 1400px){
+            font-size: 4rem;
+        }
+
+        @media screen and (max-width: 950px){
+            font-size: 3.6rem;
+        }
+
+        @media screen and (max-width: 850px){
+            width: 80%;
+        }
+
+        @media screen and (max-width: 650px){
+            width: 100%;
+            font-size: 3.3rem;
+        }
+
+        @media screen and (max-width: 400px){
+        }
+    }
+
+    &__paragraph{
+        opacity: 0;   
+        width: 40%;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        word-spacing: 1.5px;
+        color: var(--grey-light-1);
+        margin: 0 0rem 0 5rem;
+        transition: opacity 2s .5s ease-in-out;
+
+        @media screen and (max-width: 1400px){
+            font-size: 1.6rem;
+        }
+
+        @media screen and (max-width: 850px){
+            width: 80%;
+            text-align: left;
+            margin: 5rem 0rem 0 0rem;
+        }
+
+        @media screen and (max-width: 650px){
+            width: 100%;
+            margin: 5rem 0rem 0 0rem;
+        }
+
+    }
+}
+
+
+
+
+
+.offers{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+
+    @media screen and (max-width: 1400px){
+        grid-gap: 0rem;
+    }
+
+    @media screen and (max-width: 1300px){
+        grid-template-columns: repeat(2, minmax(30rem, 1fr));
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    @media screen and (max-width: 850px){
+        grid-template-columns: repeat(2, minmax(25rem, 1fr));
+        grid-gap: 4rem;
+    }
+
+    @media screen and (max-width: 650px){
+        grid-template-columns: repeat(1, minmax(30rem, 1fr));
+        margin-top: 7rem;
+    }
+    
+    &__container{
+        width: 80%;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10rem;
+        justify-self: center;
+
+        & > *:not(:last-child){
+            margin-bottom: 2rem;
+        }
+
+        @media screen and (max-width: 1300px){
+            margin-top: 4rem;
+        }
+
+        @media screen and (max-width: 650px){
+            margin-top: 1rem;
+        }
+    }
+
+    &__icon{
+        fill: var(--gold);
+        height: 5rem;
+        width: 5rem;
+
+        @media screen and (max-width: 1300px){
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+
+    &__header{
+        font-size: 2.5rem;
+        color: var(--gold);
+        font-weight: 200;
+        text-align: center;
+        white-space: nowrap;
+
+        @media screen and (max-width: 1300px){
+            font-size: 2.3rem;
+        }
+    }
+
+    &__paragraph{
+        font-size: 1.6rem;
+        line-height: 1.2;
+        word-spacing: 1.5px;
+        color: var(--grey-light-1);
+        text-align: center;
+
+        @media screen and (max-width: 1300px){
+            width: 30ch;
+            font-size: 1.5rem;
+        }
+    }
+}

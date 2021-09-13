@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="scroll-up">
+        <svg class="scroll-up__icon"><use xlink:href="img/svgs.svg#icon-circle-up"></use></svg>
+    </div>
+
+    <div class="progressBar progressBar__active"></div>
+
+    <div class="overlay">
+        <svg class="overlay__icon"><use xlink:href="img/svgs.svg#icon-cross"></use></svg>
+        <div class="overlay__container"></div>
+    </div>
+
+    <div class="static-img"></div>
+
+    <div class="cursor"></div>
+    
+    <div class="hidden-nav">
+        <ul class="hidden-nav__list">
+            <li class="hidden-nav__item">
+                <a href="#" class="hidden-nav__link">About us</a>
+            </li>
+            <li class="hidden-nav__item">
+                <a href="#" class="hidden-nav__link">Our series</a>
+            </li>
+            <li class="hidden-nav__item">
+                <a href="#" class="hidden-nav__link">Gallery</a>
+            </li>
+            <li class="hidden-nav__item">
+                <a href="#" class="hidden-nav__link">Contact us</a>
+            </li>
+        </ul>
+    </div>
+    <div class="header__hamburger">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+    </div>
+
+    <header class="header">
+        <div class="circle-menu"></div>
+
+        
+        <div class="header__logo">
+            <img src="img/Samusteel.png" alt="" class="header__logo-img">
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__list-item">
+                    <a href="#" class="header__link">About us</a>
+                </li>
+                <li class="header__list-item">
+                    <a href="#" class="header__link">Our series</a>
+                </li>
+                <li class="header__list-item">
+                    <a href="#" class="header__link">Gallery</a>
+                </li>
+                <li class="header__list-item">
+                    <a href="#" class="header__link">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="banner">
+            <div class="video-container">
+                <video src="./img/cutting-video.mp4" class="banner__video" muted loop></video>
+            </div>
+            <div class="banner__headlines">
+                <h1 class="banner__h1">Samusteel knives</h1>
+                <h3 class="banner__h3">Redefining Sharpness</h3>
+                <button class="banner__btn">Learn more &rarr;</button>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="about__container">
+                <div class="about__header-presentation">
+                    <div class="about__big-header">
+                        Forged with fire, steel and love straight from Japan
+                    </div>
+                    <div class="section-name about__section-name">
+                        About us
+                    </div>
+                    <div class="about__paragraph">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias minus est voluptatem ipsum, omnis possimus sint ea nesciunt. Ducimus pariatur laboriosam odit dolores porro beatae consequuntur est nisi? Quo quasi laudantium id fuga deserunt blanditiis.
+                    </div>
+                </div>
+
+                <div class="offers">
+                    <div class="offers__container">
+                        <svg class="offers__icon"><use xlink:href="img/svgs.svg#icon-clipboard"></use></svg>
+                        <h3 class="offers__header">Top Quality</h3>
+                        <p class="offers__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam nemo placeat iure asperiores tempora non sapiente suscipit unde nulla.</p>
+                    </div>
+
+                    <div class="offers__container">
+                        <svg class="offers__icon"><use xlink:href="img/svgs.svg#icon-fire"></use></svg>
+                        <h3 class="offers__header">Handmade Craft</h3>
+                        <p class="offers__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam nemo placeat iure asperiores tempora non sapiente suscipit unde nulla.</p>
+                    </div>
+
+                    <div class="offers__container">
+                        <svg class="offers__icon"><use xlink:href="img/svgs.svg#icon-airplane"></use></svg>
+                        <h3 class="offers__header">Shipping Worldwide</h3>
+                        <p class="offers__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam nemo placeat iure asperiores tempora non sapiente suscipit unde nulla.</p>
+                    </div>
+
+                    <div class="offers__container">
+                        <svg class="offers__icon"><use xlink:href="img/svgs.svg#icon-infinite"></use></svg>
+                        <h3 class="offers__header">Lifetime Warranty</h3>
+                        <p class="offers__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam nemo placeat iure asperiores tempora non sapiente suscipit unde nulla.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="series">
+            <div class="series__container">
+                <div class="section-name">Our Series</div>
+                    
+                <p class="series__paragraph">We've created three different series so that everyone can find the blade that suits them best according to their needs and skills</p>
+
+                <div class="series__card series__card--1">
+                    <div class="series__card--front">
+                        <img src="./img/lowSeries-1.jpg" alt="" class="series__card--img">
+                        <h1 class="series__card--name">Samurai Basic</h1>
+                        <ul class="series__card--list">
+                            <li class="series__card--list-item">
+                                <p>Tool Steel</p>
+                            </li>
+
+                            <li class="series__card--list-item">
+                                <p>Wooden Handle</p>
+                            </li>
+
+                            <li class="series__card--list-item">
+                                <p>Sharpener Included</p>
+                            </li>
+                        </ul>
+                        <button class="series__card--more series__card--btn">Read more &rarr;</button>
+                    </div>
+                    <div class="series__card--back">
+                        <p class="series__card--description">
+                            Samurai Basic knives are great for those who like to cut and slice for their families and want to get into the knives game. The knives are made of strong Tool steel and has wooden handle for stable grip.
+                        </p>
+                        <span>ONLY</span>
+                        <p class="series__card--price">
+                            $139
+                        </p>
+                        <div class="back-buttons">
+                            <button class="series__card--buy series__card--btn">Buy now</button>
+                            <button class="series__card--less series__card--btn">Read less &larr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="series__card series__card--2">
+                    <div class="series__card--front">
+                        <img src="./img/mediumSeries-1.jpg" alt="" class="series__card--img">
+                        <h1 class="series__card--name">Samurai Pro</h1>
+                        <ul class="series__card--list">
+                            <li class="series__card--list-item">
+                                <p>Carbon Steel</p>
+                            </li>
+
+                            <li class="series__card--list-item">
+                                <p>Metal Handle</p>
+                            </li>
+
+                            <li class="series__card--list-item">
+                                <p>Sharpener Included</p>
+                            </li>
+                        </ul>
+                        <button class="series__card--more series__card--btn">Read more &rarr;</button>
+                    </div>
+                    <div class="series__card--back">
+                        <p class="series__card--description">
+                            Samurai Pro knives are great for those who want to take their slicing game to the next level. The knives are made of strong and high density Carbon steel and each knife has a metal handle for more natural grip and feel for the blade.
+                        </p>
+                        <span>ONLY</span>
+                        <p class="series__card--price">
+                            $219
+                        </p>
+                        <div class="back-buttons">
+                            <button class="series__card--buy series__card--btn">Buy now</button>
+                            <button class="series__card--less series__card--btn">Read less &larr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="series__card series__card--3">
+                    <div class="series__card--front">
+                        <img src="./img/highSeries-1.jpg" alt="" class="series__card--img">
+                        <h1 class="series__card--name">Samurai Max</h1>
+                        <ul class="series__card--list">
+                            <li class="series__card--list-item">
+                                <p>Stainless Steel</p>
+                            </li>
+
+                            <li class="series__card--list-item">
+                                <p>Wooden Handle</p>
+                            </li>
+
+                            <li class="series__card--list-item">
+                                <p>Self Sharpener</p>
+                            </li>
+                        </ul>
+                        <button class="series__card--more series__card--btn">Read more &rarr;</button>
+                    </div>
+                    <div class="series__card--back">
+                        <p class="series__card--description">
+                            Samurai Max knives are great for professionals and chefs. The knives are made of Stainless steel which is super strong and sharp and each knife has a premium wooden handle for better grip. The blade can also sharpen itself while using it.
+                        </p>
+                        <span>ONLY</span>
+                        <p class="series__card--price">
+                            $349
+                        </p>
+                        <div class="back-buttons">
+                            <button class="series__card--buy series__card--btn">Buy now</button>
+                            <button class="series__card--less series__card--btn">Read less &larr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery__container">
+                <div class="section-name">Gallery</div>
+
+                <div class="gallery__cell gallery__cell--1">
+                    <div class="gallery__img gallery__img--1"></div>
+                    <svg class="gallery__icon"><use xlink:href="img/svgs.svg#icon-enlarge"></use></svg>
+                </div>
+                <div class="gallery__cell gallery__cell--2">
+                    <div class="gallery__img gallery__img--2"></div>
+                    <svg class="gallery__icon"><use xlink:href="img/svgs.svg#icon-enlarge"></use></svg>
+                </div>
+                <div class="gallery__cell gallery__cell--3">
+                    <div class="gallery__img gallery__img--3"></div>
+                    <svg class="gallery__icon"><use xlink:href="img/svgs.svg#icon-enlarge"></use></svg>
+                </div>
+                <div class="gallery__cell gallery__cell--4">
+                    <div class="gallery__img gallery__img--4"></div>
+                    <svg class="gallery__icon"><use xlink:href="img/svgs.svg#icon-enlarge"></use></svg>
+                </div>
+                <div class="gallery__cell gallery__cell--5">
+                    <div class="gallery__img gallery__img--5"></div>
+                    <svg class="gallery__icon"><use xlink:href="img/svgs.svg#icon-enlarge"></use></svg>
+                </div>
+                <div class="gallery__cell gallery__cell--6">
+                    <div class="gallery__img gallery__img--6"></div>
+                    <svg class="gallery__icon"><use xlink:href="img/svgs.svg#icon-enlarge"></use></svg>
+                </div>
+                <div class="gallery__cell gallery__cell--7">
+                    <div class="gallery__img gallery__img--7"></div>
+                    <svg class="gallery__icon"><use xlink:href="img/svgs.svg#icon-enlarge"></use></svg>
+                </div>
+                <div class="gallery__cell gallery__cell--8">
+                    <div class="gallery__img gallery__img--8"></div>
+                    <svg class="gallery__icon"><use xlink:href="img/svgs.svg#icon-enlarge"></use></svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <div class="section-name">Contact Us</div>
+                
+                <div class="form">
+                    <h1 class="container__current-input">Get in touch with us</h1>
+                
+                    <input type="text" class="container__input--first container__input" placeholder="First name:">
+                    <input type="text" class="container__input--last container__input" placeholder="Last name:">
+                    <input type="tel" class="container__input--tel container__input" placeholder="Phone number:">
+                    <input type="email" class="container__input--email container__input" placeholder="Email Address:">
+                    <textarea id="" cols="30" rows="6" class="container__input--comments container__input" placeholder="Comments:"></textarea>
+
+                    <button class="container__button btn">Send</button>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer__social-box">
+                <div class="footer__social footer__social--face">
+                    <svg class="footer__icon"><use xlink:href="img/svgs.svg#icon-facebook"></use></svg>
+                </div>
+                <div class="footer__social footer__social--inst">
+                    <svg class="footer__icon"><use xlink:href="img/svgs.svg#icon-instagram"></use></svg>
+                </div>
+                <div class="footer__social footer__social--twit">
+                    <svg class="footer__icon"><use xlink:href="img/svgs.svg#icon-twitter"></use></svg>
+                </div>
+            </div>
+            <ul class="footer__ul footer__ul-1">
+                <li class="footer__item footer__item-1">Info</li>
+                <li class="footer__item footer__item-2">Support</li>
+                <li class="footer__item footer__item-3">Marketing</li>
+            </ul>
+
+            <ul class="footer__ul footer__ul-2">
+                <li class="footer__item footer__item-4">Terms of use</li>
+                <li class="footer__item footer__item-5">Privacy policy</li>
+            </ul>
+
+            <p class="footer__copyrights">&copy; 2021 Arbel Ziskind</p>
+        </footer>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,189 @@
+.video-container{
+    height: 110vh;
+    min-width: 100%;
+    background-color: rgba(8, 20, 49, 0.789);
+
+    @media screen and (max-width: 480px){
+        height: 95vh;
+    }
+}
+
+.banner{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+    position: relative;
+    z-index: 1;
+
+    
+    @media screen and (max-width: 550px){
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 92%);
+    }
+    
+    &__video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__headlines{
+        position: absolute;
+        top: 35%;
+        left: 25rem;
+        transform: translateY(-50%);
+
+        @media screen and (max-width: 1400px){
+            left: 12rem;
+        }
+
+        @media screen and (max-width:950px){
+            left: 8rem;
+        }
+
+        @media screen and (max-width:500px){
+            left: 6rem;
+        }
+
+        @media screen and (max-width:400px){
+            left: 4rem;
+        }
+
+        @media screen and (max-width:350px){
+            left: 3rem;
+        }
+
+        & > *:not(:last-child){
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__h1{
+        font-size: 6rem;
+        font-weight: 700;
+        color: var(--grey-light-1);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        word-spacing: 10px;
+        transform: translateX(-900px);
+        opacity: 0;
+        animation: enterLeft 2s forwards cubic-bezier(.1,1,.3,1.15);
+        text-shadow: .5rem .5rem .5rem #5c4d1d; ////??????
+
+        @media screen and (max-width: 1300px){
+            font-size: 5.5rem;
+        }
+
+        @media screen and (max-width:950px){
+            font-size: 5rem;
+        }
+
+        @media screen and (max-width:700px){
+            font-size: 4.5rem;
+        }
+
+        @media screen and (max-width:500px){
+            font-size: 4rem;
+        }
+
+        @media screen and (max-width:350px){
+            font-size: 3.6rem;
+        }
+    }
+
+    &__h3{
+        font-size: 3.5rem;
+        color: var(--grey-light-1);
+        letter-spacing: 1px;
+        word-spacing: 5px;
+        font-family: 'Lora', serif;
+        font-weight: 300;
+        opacity: 0;
+        animation: enterUp 1.3s forwards .7s ease-out;
+        margin-top: -2rem;
+
+        @media screen and (max-width: 1300px){
+            font-size: 3.2rem;
+        }
+
+        @media screen and (max-width:950px){
+            font-size: 3rem;
+        }
+
+        @media screen and (max-width:700px){
+            font-size: 2.8rem;
+        }
+
+        @media screen and (max-width:500px){
+            font-size: 2.6rem;
+            margin-top: -1rem;
+        }
+
+        @media screen and (max-width:350px){
+            font-size: 2.3rem;
+        }
+    }
+
+    &__btn{
+        border-radius: 99px;
+        padding: .75rem 2.5rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        font-family: 'Lora', serif;
+        background-color: var(--grey-light-1);
+        color: var(--primary-light-2);
+        cursor: none;
+        outline: none;
+        border: none;
+        transition: .2s;
+        margin-top: 1rem;
+        opacity: 0;
+        animation: enterUp 1s forwards 1s ease-out;
+
+        @media screen and (max-width: 1300px){
+            padding: .65rem 2.2rem;
+        }
+
+        @media screen and (max-width:950px){
+            padding: .65rem 2rem;
+        }
+
+        @media screen and (max-width:350px){
+            padding: .4rem 1.5rem;
+            margin-top: -.75rem;
+        }
+
+        &:hover{
+            background-color: var(--gold);
+            color: var(--primary-dark-1);
+            box-shadow: 0px .5rem 2rem rgba(0, 0, 0, 0.342);
+        }
+
+        &:active{
+            transform: translateY(2px);
+        }
+    }
+}
+
+@keyframes enterLeft{
+    0%{
+        transform: translateX(-900px);
+        opacity: 0;
+    }
+    100%{
+        transform: unset;
+        opacity: 1;
+    }
+}
+
+@keyframes enterUp{
+    0%{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
